@@ -1,0 +1,37 @@
+# Install system packages
+packages:
+  # Example
+  # - git
+  # - curl
+  # - vim
+  # - htop
+
+# Copy config files from your dotfile repo into the container
+copies:
+  # Example
+  # - name: bashrc
+  #   source: config/.bashrc
+  #   target: ~/.bashrc
+  #   mode: replace
+
+  # - name: git-aliases
+  #   source: config/.git_aliases
+  #   target: ~/.bashrc
+  #   mode: append
+
+# Mount remote directories for persistent state (requires FUSE)
+mounts:
+  ssh:
+    host: api.cluster.bbenetti.ca
+    user: root
+    port: 20202
+  entries:
+    - name: claude
+      source: /data/teeleport/.claude
+      target: ~/.claude
+      backend: sshfs
+
+# Install and auto-run an AI CLI tool
+ai_cli:
+  tool: claude-code
+  # startup_prompt: "Do stuffs"
