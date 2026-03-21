@@ -35,6 +35,11 @@ mounts:
       source: /data/teeleport/.claude
       target: ~/.claude
       backend: sshfs
+    - name: claude-json
+      source: /data/teeleport/.claude.json
+      target: ~/.claude.json
+      type: file
+      backend: sshfs
 
 # Install and auto-run an AI CLI tool
 ai_cli:
