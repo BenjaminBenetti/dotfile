@@ -8,6 +8,11 @@ packages:
 
 # Copy config files from your dotfile repo into the container
 copies:
+  - name: bashrc
+    source: .bashrc
+    target: ~/.bashrc
+    mode: append
+
   # Example
   # - name: bashrc
   #   source: config/.bashrc
