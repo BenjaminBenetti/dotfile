@@ -27,7 +27,7 @@ copies:
 # Mount remote directories for persistent state (requires FUSE)
 mounts:
   ssh:
-    host: api.cluster.bbenetti.ca
+    host: ssh.bbenetti.ca
     user: root
     port: 20202
   entries:
