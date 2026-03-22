@@ -41,7 +41,6 @@ mounts:
       force_mount: true
     - name: copilot
       preset: copilot
-      force_mount: true
     - name: gh
       preset: gh
       force_mount: true
