@@ -31,9 +31,8 @@ mounts:
     user: root
     port: 20202
   entries:
-    entries:
-      - name: claude-preset
-        preset: claude
+    - name: claude-preset
+      preset: claude
 
 # Install and auto-run an AI CLI tool
 ai_cli:
