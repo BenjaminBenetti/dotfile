@@ -35,6 +35,8 @@ mounts:
       preset: claude
     - name: codex
       preset: codex
+    - name: copilot
+      preset: copilot
     - name: gh
       preset: gh
 
@@ -42,4 +44,5 @@ mounts:
 ai_cli:
   - tool: claude-code
   - tool: codex
+  - tool: copilot
   # startup_prompt: "Do stuffs"
