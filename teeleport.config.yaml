@@ -35,12 +35,16 @@ mounts:
   entries:
     - name: claude
       preset: claude
+      force_mount: true
     - name: codex
       preset: codex
+      force_mount: true
     - name: copilot
       preset: copilot
+      force_mount: true
     - name: gh
       preset: gh
+      force_mount: true
 
 # Install and auto-run an AI CLI tool
 ai_cli:
