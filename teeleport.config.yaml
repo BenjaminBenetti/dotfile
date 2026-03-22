@@ -1,5 +1,7 @@
 # Install system packages
 packages:
+  # Codex emits a warning if this is missing (though it still works)
+  - bubblewrap
   # Example
   # - git
   # - curl
