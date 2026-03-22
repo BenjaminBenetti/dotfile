@@ -31,17 +31,12 @@ mounts:
     user: root
     port: 20202
   entries:
-    - name: claude
-      source: /data/teeleport/.claude
-      target: ~/.claude
-      backend: sshfs
-    - name: claude-json
-      source: /data/teeleport/.claude.json
-      target: ~/.claude.json
-      type: file
-      backend: sshfs
+    entries:
+      - name: claude-preset
+        preset: claude
 
 # Install and auto-run an AI CLI tool
 ai_cli:
-  tool: claude-code
+  - tool: claude-code
+  - tool: codex
   # startup_prompt: "Do stuffs"
