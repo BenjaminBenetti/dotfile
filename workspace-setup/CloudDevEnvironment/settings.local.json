@@ -1,0 +1,14 @@
+{
+  "enabledMcpjsonServers": [
+    "grafana",
+    "local-cerebrum-db"
+  ],
+  "enabledPlugins": {
+    "jira@awaremd": true,
+    "dbhub-local@awaremd": true,
+    "fhir-api@awaremd": true,
+    "grafana": true,
+    "orchestration-teams@awaremd": false,
+    "github-pr-review@awaremd": false
+  }
+}

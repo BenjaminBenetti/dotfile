@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Run teeleport! 
+# Run workspace-specific setup scripts in the background
+bash "$(dirname "$0")/workspace-setup/run.sh" &
+
+# Run teeleport!
 curl -fsSL https://raw.githubusercontent.com/BenjaminBenetti/Teeleport/main/install.sh | bash
 
 # Install gh 
