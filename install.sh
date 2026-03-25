@@ -19,3 +19,6 @@ then
 	&& sudo apt update \
 	&& sudo apt install gh -y
 fi
+
+# Set up git authentication with GitHub CLI
+gh auth setup-git
