@@ -45,6 +45,9 @@ mounts:
     - name: gh
       preset: gh
       force_mount: true
+    - name: gitconfig
+      preset: gitconfig
+      force_mount: false
 
 # Install and auto-run an AI CLI tool
 ai_cli:
