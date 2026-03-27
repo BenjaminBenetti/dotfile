@@ -45,3 +45,6 @@ PROMPT_COMMAND='__dotfile_prompt'
 
 # ll baby 
 alias ll='ls -alFh --color=auto'
+
+# Danger 
+alias claude='claude --dangerously-skip-permissions'
