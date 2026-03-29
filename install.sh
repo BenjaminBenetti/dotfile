@@ -22,3 +22,7 @@ fi
 
 # Set up git authentication with GitHub CLI
 gh auth setup-git
+
+# configure git name / email
+git config --global user.name "Benjamin Benetti"
+git config --global user.email "ben@bbenetti.ca"

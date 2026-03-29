@@ -45,6 +45,9 @@ mounts:
     - name: gh
       preset: gh
       force_mount: true
+    - name: known_hosts
+      preset: known_hosts
+      force_mount: true
 
 # Install and auto-run an AI CLI tool
 ai_cli:
