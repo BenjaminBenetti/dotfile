@@ -30,17 +30,17 @@ echo "Detected package manager: $PM"
 install_system_deps() {
   case "$PM" in
   dnf)
-    sudo dnf install -y curl tar fontconfig git
+    sudo dnf install -y curl tar fontconfig git gcc ripgrep
     ;;
   apt)
     sudo apt-get update
-    sudo apt-get install -y curl tar fontconfig git
+    sudo apt-get install -y curl tar fontconfig git gcc ripgrep
     ;;
   pacman)
-    sudo pacman -Sy --noconfirm curl tar fontconfig git
+    sudo pacman -Sy --noconfirm curl tar fontconfig git gcc ripgrep
     ;;
   brew)
-    brew install curl git
+    brew install curl git gcc ripgrep
     ;;
   esac
 }
