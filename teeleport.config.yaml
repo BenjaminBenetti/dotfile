@@ -2,6 +2,7 @@
 packages:
   # Codex emits a warning if this is missing (though it still works)
   - bubblewrap
+  - vim
   # Example
   # - git
   # - curl
