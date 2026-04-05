@@ -1,6 +1,5 @@
 {
   "name": "Dotfiles",
   "image": "mcr.microsoft.com/devcontainers/base:trixie",
-  "remoteUser": "vscode",
-  "postCreateCommand": "bash /workspaces/dotfile/install.sh"
+  "remoteUser": "vscode"
 }
