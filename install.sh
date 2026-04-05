@@ -26,3 +26,6 @@ gh auth setup-git
 # configure git name / email
 git config --global user.name "Benjamin Benetti"
 git config --global user.email "ben@bbenetti.ca"
+
+# Install editor 
+./editor-install.sh
