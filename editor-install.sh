@@ -95,11 +95,18 @@ install_lazyvim() {
 
   git clone https://github.com/LazyVim/starter "$HOME/.config/nvim"
   rm -rf "$HOME/.config/nvim/.git"
-  echo "LazyVim starter installed — plugins will auto-install on first launch"
+  echo "LazyVim starter installed"
+}
+
+install_lazyvim_plugins() {
+  echo "Installing LazyVim plugins (headless)..."
+  nvim --headless "+Lazy! sync" +qa
+  echo "LazyVim plugins installed"
 }
 
 echo "Setting up LazyVim..."
 install_lazyvim
+install_lazyvim_plugins
 
 # ===========================================
 # lazygit

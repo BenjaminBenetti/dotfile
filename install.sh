@@ -27,5 +27,11 @@ gh auth setup-git
 git config --global user.name "Benjamin Benetti"
 git config --global user.email "ben@bbenetti.ca"
 
-# Install editor 
+# Install editor
 ./editor-install.sh
+
+# Set default editor to Neovim
+export EDITOR=nvim
+if ! grep -q 'export EDITOR=nvim' "$HOME/.bashrc" 2>/dev/null; then
+  echo 'export EDITOR=nvim' >> "$HOME/.bashrc"
+fi
