@@ -34,6 +34,10 @@ mounts:
     user: root
     port: 20202
   entries:
+    - name: tmptest 
+      source: /var/opt/teeleport/.tmptest
+      target: ~/.tmptest 
+      backend: rsync 
     - name: claude
       preset: claude
       force_mount: true
