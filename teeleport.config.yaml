@@ -37,23 +37,23 @@ mounts:
     - name: tmptest 
       source: /var/opt/teeleport/.tmptest
       target: ~/.tmptest 
-      backend: rsync 
+#      backend: rsync 
     - name: claude
       preset: claude
       force_mount: true
-      backend: rsync
+#      backend: rsync
     - name: codex
       preset: codex
       force_mount: true
-      backend: rsync
+#      backend: rsync
     - name: copilot
       preset: copilot
       force_mount: true
-      backend: rsync
+#      backend: rsync
     - name: known_hosts
       preset: known_hosts
       force_mount: true
-      backend: rsync
+#      backend: rsync
 
 # Install and auto-run an AI CLI tool
 ai_cli:
