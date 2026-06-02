@@ -46,10 +46,10 @@ mounts:
 #     preset: copilot
 #     force_mount: true
 #     backend: rsync
-    - name: known_hosts
-      preset: known_hosts
-      force_mount: true
-      backend: rsync
+#    - name: known_hosts
+#      preset: known_hosts
+#      force_mount: true
+#      backend: rsync
 
 # Install and auto-run an AI CLI tool
 ai_cli:
