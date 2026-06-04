@@ -53,7 +53,7 @@ mounts:
 
 # Install and auto-run an AI CLI tool
 ai_cli:
-  - tool: claude-code
-  - tool: codex
+#  - tool: claude-code
+#  - tool: codex
   - tool: copilot
   # startup_prompt: "Do stuffs"
