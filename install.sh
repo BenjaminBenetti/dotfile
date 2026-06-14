@@ -30,6 +30,9 @@ git config --global user.email "ben@bbenetti.ca"
 # Install editor
 ./editor-install.sh
 
+# Install lazy tools (lazygit + lazydocker)
+./lazytools-install.sh
+
 # Set default editor to Neovim
 export EDITOR=nvim
 if ! grep -q 'export EDITOR=nvim' "$HOME/.bashrc" 2>/dev/null; then

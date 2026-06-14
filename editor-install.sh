@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Terminal toolkit: Neovim + LazyVim, lazygit, JetBrainsMono Nerd Font
+# Terminal toolkit: Neovim + LazyVim, JetBrainsMono Nerd Font
 set -euo pipefail
 
 # ===========================================
@@ -107,41 +107,6 @@ install_lazyvim_plugins() {
 echo "Setting up LazyVim..."
 install_lazyvim
 install_lazyvim_plugins
-
-# ===========================================
-# lazygit
-# ===========================================
-
-install_lazygit() {
-  if command -v lazygit &>/dev/null; then
-    echo "lazygit already installed: $(lazygit --version | grep -oP 'version=\K[^,]+')"
-    return
-  fi
-
-  case "$PM" in
-  dnf)
-    sudo dnf copr enable -y atim/lazygit
-    sudo dnf install -y lazygit
-    ;;
-  apt)
-    local version
-    version=$(curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | grep -Po '"tag_name": "v\K[^"]*')
-    curl -sL "https://github.com/jesseduffield/lazygit/releases/download/v${version}/lazygit_${version}_Linux_x86_64.tar.gz" -o /tmp/lazygit.tar.gz
-    sudo tar xzf /tmp/lazygit.tar.gz -C /usr/local/bin lazygit
-    rm /tmp/lazygit.tar.gz
-    ;;
-  pacman)
-    sudo pacman -S --noconfirm lazygit
-    ;;
-  brew)
-    brew install lazygit
-    ;;
-  esac
-  echo "lazygit installed"
-}
-
-echo "Installing lazygit..."
-install_lazygit
 
 # ===========================================
 # JetBrainsMono Nerd Font
