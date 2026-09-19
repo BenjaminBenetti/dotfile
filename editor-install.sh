@@ -98,6 +98,18 @@ install_lazyvim() {
   echo "LazyVim starter installed"
 }
 
+deploy_nvim_overlay() {
+  # Copy tracked config (colorschemes, etc.) on top of the LazyVim starter.
+  # Runs every time so existing installs pick up changes too.
+  local script_dir overlay
+  script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  overlay="$script_dir/nvim"
+  if [ -d "$overlay" ]; then
+    echo "Deploying Neovim overlay (colorschemes, etc.)..."
+    cp -r "$overlay/." "$HOME/.config/nvim/"
+  fi
+}
+
 install_lazyvim_plugins() {
   echo "Installing LazyVim plugins (headless)..."
   nvim --headless "+Lazy! sync" +qa
@@ -106,6 +118,7 @@ install_lazyvim_plugins() {
 
 echo "Setting up LazyVim..."
 install_lazyvim
+deploy_nvim_overlay
 install_lazyvim_plugins
 
 # ===========================================
